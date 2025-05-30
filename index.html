@@ -132,6 +132,54 @@
       <p>Healthy Over Forty</p>
     </div>
   </header>
+<style>
+  .dropdown {
+    margin: 10px;
+    position: relative;
+    width: 300px;
+  }
+  .dropdown-content {
+    display: none;
+    background-color: #fffef8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+  }
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  .dropdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #fffef8;
+  }
+  nav a {
+    color: #2e2e2e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+  }
+</style>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="programs.html">Programs</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
   <section class="hero">
     <h1>Stronger, Leaner, Sharper</h1>
@@ -243,4 +291,11 @@ If you’re done feeling drained, scattered, or stuck—this is where the comeba
     }
   </script>
 </body>
+  <script>
+  function toggleDropdown(type) {
+    const dropdown = document.getElementById(`dropdown-${type}`);
+    dropdown.classList.toggle('active');
+  }
+</script>
+
 </html>
