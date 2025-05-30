@@ -3,7 +3,7 @@
 <head>
   <title>Nadifi FTNSS</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html {
       scroll-behavior: smooth;
@@ -130,6 +130,39 @@
   <section class="about">
     <h2>About the Coach</h2>
     <p>Yassir Nadifi is the founder of Nadifi FTNSS, a certified NASM trainer and nutrition coach with over a decade of experience helping clients transform their lives. After reversing his own type 2 diabetes, he built a concierge wellness business that’s helped clients collectively lose over 2,000 pounds. Yassir blends functional strength, corrective training, and low-carb nutrition with modern tools and old-school grit. He’s also a seasoned content creator, known for delivering no-nonsense fitness advice rooted in science, discipline, and lifestyle change.</p>
+
+    <div style="margin-top: 30px;">
+      <button onclick="toggleDropdown('beginner')">Beginner</button>
+      <div id="beginner" style="display:none; text-align:left; margin-top:10px;">
+        🟢 <strong>Beginner – Rebuild & Reset</strong><br>
+        For men and women 40+ who are starting fresh or returning after time off.<br>
+        This isn’t about going hard—it’s about going smart. We focus on building foundational strength, restoring mobility, improving posture, and boosting confidence. Think of it as fitness rehab meets future-proofing.<br>
+        ✅ Gentle on the joints. Focused on form. Backed by science.
+      </div>
+
+      <button onclick="toggleDropdown('intermediate')" style="margin-top: 15px;">Intermediate</button>
+      <div id="intermediate" style="display:none; text-align:left; margin-top:10px;">
+        🔶 <strong>Intermediate – Stronger, Leaner, Sharper</strong><br>
+        For 40+ folks who’ve got some experience and want to step it up.<br>
+        This is where the magic happens. We use time-efficient workouts to increase lean muscle, strengthen your metabolism, and improve cardiovascular health—without crash diets or injury.<br>
+        🏋️‍♂️ Real muscle. Real stamina. Real energy. Built for your life, not your ego.
+      </div>
+
+      <button onclick="toggleDropdown('pro')" style="margin-top: 15px;">Pro</button>
+      <div id="pro" style="display:none; text-align:left; margin-top:10px;">
+        🔴 <strong>Pro – Performance at Any Age</strong><br>
+        For high performers 40+ who want to train with intention and precision.<br>
+        This program is for the experienced lifters, weekend warriors, and everyday badasses who want more. It’s tailored with age-smart progressions, recovery strategies, and metabolic firepower.<br>
+        🔥 Peak strength, lean physique, and longevity training—without the wear and tear.
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
   </section>
 
   <section class="cta">
