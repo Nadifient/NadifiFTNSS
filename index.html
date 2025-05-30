@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nadifi FTNSS</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfaf5;
+      color: #2e2e2e;
+    }
+    header {
+      background: #fffef8;
+      color: #222;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+    section.hero {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin: 0 0 10px;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1.1em;
+    }
+    section.about, section.cta, section.form-section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      background-color: #fffef8;
+    }
+    .cta button, form button {
+      background: #2e2e2e;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 30px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    input, select, textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      background-color: #fefefe;
+    }
+    label {
+      text-align: left;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1eee7;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="nadifi-ftnss-logo.png" alt="Nadifi FTNSS Logo">
+    <h1>Nadifi FTNSS</h1>
+    <p>Healthy Over Forty</p>
+  </header>
+
+  <section class="hero">
+    <h1>Stronger, Leaner, Sharper</h1>
+    <p>Rooted in function. Inspired by tradition. Built for longevity.</p>
+  </section>
+
+  <section class="about">
+    <h2>About the Program</h2>
+    <p>We train the body and mind for resilience — using low-carb nutrition, functional strength, and ancestral principles. If you're over 40 and ready to feel energized, dialed in, and back in control, this is for you.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Join the Program</h2>
+    <p>Kickstart your transformation with a personalized plan and coaching built around *your* life.</p>
+    <a href="#join-form"><button>Join Now</button></a>
+  </section>
+
+  <section class="form-section" id="join-form">
+    <h2>Sign Up</h2>
+    <form action="#" method="post">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location">
+      <label for="goals">What are you looking to achieve?</label>
+      <textarea id="goals" name="goals" rows="4"></textarea>
+      <label for="program">Choose Your Program</label>
+      <select id="program" name="program">
+        <option value="beginner">Beginner – Learn the basics, get your first training plan and nutrition guide</option>
+        <option value="intermediate">Intermediate – Dial in your training and nutrition, break plateaus</option>
+        <option value="pro">Pro – Get laser specific: advanced periodization, recovery, and nutrition tuning</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Nadifi FTNSS. All rights reserved.
+  </footer>
+</body>
+</html>
