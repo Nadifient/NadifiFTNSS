@@ -95,29 +95,16 @@
       font-weight: bold;
       margin-top: 10px;
     }
-    .dropdown {
-      margin: 10px;
-    }
     .dropdown-content {
       display: none;
       background-color: #fffef8;
+      margin-top: 10px;
       padding: 15px;
       border-radius: 10px;
       text-align: left;
-      position: absolute;
-      width: 300px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 10;
     }
-    .dropdown.active .dropdown-content {
+    .active-dropdown {
       display: block;
-    }
-    .dropdown-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      position: relative;
     }
     footer {
       text-align: center;
@@ -147,28 +134,28 @@
   <section class="about">
     <h2>About the Program</h2>
     <p>We train the body and mind for resilience — using low-carb nutrition, functional strength, and ancestral principles. If you're over 40 and ready to feel energized, dialed in, and back in control, this is for you.</p>
-    <div class="dropdown-container">
-      <div class="dropdown" id="dropdown-beginner">
+    <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+      <div>
         <button class="dropdown-toggle" onclick="toggleDropdown('beginner')">Beginner</button>
-        <div class="dropdown-content">
+        <div id="beginner" class="dropdown-content">
           🟢 <strong>Beginner – Rebuild & Reset</strong><br>
           For men and women 40+ who are starting fresh or returning after time off.<br>
           This isn’t about going hard—it’s about going smart. We focus on building foundational strength, restoring mobility, improving posture, and boosting confidence. Think of it as fitness rehab meets future-proofing.<br>
           ✅ Gentle on the joints. Focused on form. Backed by science.
         </div>
       </div>
-      <div class="dropdown" id="dropdown-intermediate">
+      <div>
         <button class="dropdown-toggle" onclick="toggleDropdown('intermediate')">Intermediate</button>
-        <div class="dropdown-content">
+        <div id="intermediate" class="dropdown-content">
           🔶 <strong>Intermediate – Stronger, Leaner, Sharper</strong><br>
           For 40+ folks who’ve got some experience and want to step it up.<br>
           This is where the magic happens. We use time-efficient workouts to increase lean muscle, strengthen your metabolism, and improve cardiovascular health—without crash diets or injury.<br>
           🏋️‍♂️ Real muscle. Real stamina. Real energy. Built for your life, not your ego.
         </div>
       </div>
-      <div class="dropdown" id="dropdown-pro">
+      <div>
         <button class="dropdown-toggle" onclick="toggleDropdown('pro')">Pro</button>
-        <div class="dropdown-content">
+        <div id="pro" class="dropdown-content">
           🔴 <strong>Pro – Performance at Any Age</strong><br>
           For high performers 40+ who want to train with intention and precision.<br>
           This program is for the experienced lifters, weekend warriors, and everyday badasses who want more. It’s tailored with age-smart progressions, recovery strategies, and metabolic firepower.<br>
@@ -177,16 +164,47 @@
       </div>
     </div>
     <script>
-      function toggleDropdown(type) {
-        document.querySelectorAll('.dropdown').forEach(el => {
-          if (el.id === `dropdown-${type}`) {
-            el.classList.toggle('active');
-          } else {
-            el.classList.remove('active');
-          }
-        });
+      function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle("active-dropdown");
       }
     </script>
   </section>
+
+  <section class="about">
+    <h2>About the Coach</h2>
+    <p>Yassir Nadifi is the founder of Nadifi FTNSS, a certified NASM trainer and nutrition coach with over a decade of experience helping clients transform their lives. After reversing his own type 2 diabetes, he built a concierge wellness business that’s helped clients collectively lose over 2,000 pounds. Yassir blends functional strength, corrective training, and low-carb nutrition with modern tools and old-school grit. He’s also a seasoned content creator, known for delivering no-nonsense fitness advice rooted in science, discipline, and lifestyle change.</p>
+  </section>
+
+  <section class="form-section" id="join-form">
+    <h2>Sign Up</h2>
+    <form action="https://formspree.io/f/xpwrareq" method="POST">
+      <input type="hidden" name="_next" value="https://nadifient.github.io/NadifiFTNSS/thank-you.html">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location">
+
+      <label for="goals">What are you looking to achieve?</label>
+      <textarea id="goals" name="goals" rows="4"></textarea>
+
+      <label for="program">Choose Your Program</label>
+      <select id="program" name="program">
+        <option value="beginner">Beginner – Learn the basics, get your first training plan and nutrition guide</option>
+        <option value="intermediate">Intermediate – Dial in your training and nutrition, break plateaus</option>
+        <option value="pro">Pro – Get laser specific: advanced periodization, recovery, and nutrition tuning</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Nadifi FTNSS. All rights reserved.
+  </footer>
 </body>
 </html>
