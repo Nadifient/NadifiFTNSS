@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
@@ -15,12 +18,33 @@
     header {
       background: #fffef8;
       color: #222;
-      padding: 40px 20px 20px;
-      text-align: center;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
-    header img {
-      width: 120px;
-      margin-bottom: 10px;
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 110px;
+    }
+    .branding {
+      text-align: right;
+      flex-grow: 1;
+    }
+    .branding h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    .branding p {
+      margin: 4px 0 0;
+      font-size: 1.2em;
     }
     section.hero {
       background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
@@ -84,9 +108,13 @@
 </head>
 <body>
   <header>
-    <img src="nadifi-ftnss-logo.png" alt="Nadifi FTNSS Logo">
-    <h1>Nadifi FTNSS</h1>
-    <p>Healthy Over Forty</p>
+    <div class="logo">
+      <img src="nadifi (2).png" alt="Nadifi FTNSS Logo">
+    </div>
+    <div class="branding">
+      <h1>Nadifi FTNSS</h1>
+      <p>Healthy Over Forty</p>
+    </div>
   </header>
 
   <section class="hero">
@@ -110,18 +138,23 @@
     <form action="#" method="post">
       <label for="fullname">Full Name</label>
       <input type="text" id="fullname" name="fullname" required>
+
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required>
+
       <label for="location">Location</label>
       <input type="text" id="location" name="location">
+
       <label for="goals">What are you looking to achieve?</label>
       <textarea id="goals" name="goals" rows="4"></textarea>
+
       <label for="program">Choose Your Program</label>
       <select id="program" name="program">
         <option value="beginner">Beginner – Learn the basics, get your first training plan and nutrition guide</option>
         <option value="intermediate">Intermediate – Dial in your training and nutrition, break plateaus</option>
         <option value="pro">Pro – Get laser specific: advanced periodization, recovery, and nutrition tuning</option>
       </select>
+
       <button type="submit">Submit</button>
     </form>
   </section>
