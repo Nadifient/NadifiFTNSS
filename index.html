@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nadifi FTNSS</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -25,13 +25,7 @@
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-    .logo img {
-      width: 160px;
-    }
+    .logo img { width: 160px; }
     .branding {
       text-align: right;
       flex-grow: 1;
@@ -50,21 +44,17 @@
       text-align: center;
       padding: 100px 20px;
     }
-    .hero h1 {
-      font-size: 2.8em;
-      margin: 0 0 10px;
-      letter-spacing: 1px;
-    }
-    .hero p {
-      font-size: 1.1em;
-    }
-    section.about, section.cta, section.form-section {
+    .hero h1 { font-size: 2.8em; margin: 0 0 10px; letter-spacing: 1px; }
+    .hero p { font-size: 1.1em; }
+
+    section.about, section.form-section {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
       text-align: center;
       background-color: #fffef8;
     }
+
     .cta button, form button, .dropdown-toggle {
       background: #2e2e2e;
       color: white;
@@ -77,6 +67,34 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .dropdown {
+      margin: 10px;
+      position: relative;
+      width: 300px;
+    }
+    .dropdown-content {
+      display: none;
+      background-color: #fffef8;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      transition: max-height 0.3s ease;
+      overflow: hidden;
+    }
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -94,30 +112,6 @@
       text-align: left;
       font-weight: bold;
       margin-top: 10px;
-    }
-    .dropdown {
-      margin: 10px;
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      background-color: #fffef8;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: left;
-      position: absolute;
-      width: 300px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-    }
-    .dropdown.active .dropdown-content {
-      display: block;
-    }
-    .dropdown-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
     }
     footer {
       text-align: center;
@@ -147,6 +141,7 @@
   <section class="about">
     <h2>About the Program</h2>
     <p>We train the body and mind for resilience — using low-carb nutrition, functional strength, and ancestral principles. If you're over 40 and ready to feel energized, dialed in, and back in control, this is for you.</p>
+
     <div class="dropdown-container">
       <div class="dropdown" id="dropdown-beginner">
         <button class="dropdown-toggle" onclick="toggleDropdown('beginner')">Beginner</button>
@@ -157,6 +152,7 @@
           ✅ Gentle on the joints. Focused on form. Backed by science.
         </div>
       </div>
+
       <div class="dropdown" id="dropdown-intermediate">
         <button class="dropdown-toggle" onclick="toggleDropdown('intermediate')">Intermediate</button>
         <div class="dropdown-content">
@@ -166,6 +162,7 @@
           🏋️‍♂️ Real muscle. Real stamina. Real energy. Built for your life, not your ego.
         </div>
       </div>
+
       <div class="dropdown" id="dropdown-pro">
         <button class="dropdown-toggle" onclick="toggleDropdown('pro')">Pro</button>
         <div class="dropdown-content">
@@ -176,17 +173,6 @@
         </div>
       </div>
     </div>
-    <script>
-      function toggleDropdown(type) {
-        document.querySelectorAll('.dropdown').forEach(el => {
-          if (el.id === `dropdown-${type}`) {
-            el.classList.toggle('active');
-          } else {
-            el.classList.remove('active');
-          }
-        });
-      }
-    </script>
   </section>
 
   <section class="form-section" id="join-form">
@@ -219,5 +205,12 @@
   <footer>
     &copy; 2025 Nadifi FTNSS. All rights reserved.
   </footer>
+
+  <script>
+    function toggleDropdown(type) {
+      const dropdown = document.getElementById(`dropdown-${type}`);
+      dropdown.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
