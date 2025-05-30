@@ -107,37 +107,133 @@
   </style>
 </head>
 <body>
-  <!-- previous content remains unchanged -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Nadifi FTNSS Logo">
+    </div>
+    <div class="branding">
+      <h1>Nadifi FTNSS</h1>
+      <p>Healthy Over Forty</p>
+    </div>
+  </header>
 
-  <section class="form-section" id="join-form">
-    <h2>Sign Up</h2>
-    <form action="https://formspree.io/f/xpwrareq" method="POST">
-      <input type="hidden" name="_next" value="https://nadifient.github.io/NadifiFTNSS/thank-you.html">
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="location">Location</label>
-      <input type="text" id="location" name="location">
-
-      <label for="goals">What are you looking to achieve?</label>
-      <textarea id="goals" name="goals" rows="4"></textarea>
-
-      <label for="program">Choose Your Program</label>
-      <select id="program" name="program">
-        <option value="beginner">Beginner – Learn the basics, get your first training plan and nutrition guide</option>
-        <option value="intermediate">Intermediate – Dial in your training and nutrition, break plateaus</option>
-        <option value="pro">Pro – Get laser specific: advanced periodization, recovery, and nutrition tuning</option>
-      </select>
-
-      <button type="submit">Submit</button>
-    </form>
+  <section class="hero">
+    <h1>Stronger, Leaner, Sharper</h1>
+    <p>Rooted in function. Inspired by tradition. Built for longevity.</p>
   </section>
 
-  <footer>
-    &copy; 2025 Nadifi FTNSS. All rights reserved.
-  </footer>
-</body>
-</html>
+  <section class="about">
+    <h2>About the Program</h2>
+    <p>We train the body and mind for resilience — using low-carb nutrition, functional strength, and ancestral principles. If you're over 40 and ready to feel energized, dialed in, and back in control, this is for you.</p>
+  </section>
+
+  <hr style="border: none; border-top: 1px solid #ddd; margin: 30px auto; width: 60%;">
+  <section class="about">
+    <h2>About the Coach</h2>
+    <p>Yassir Nadifi is the founder of Nadifi FTNSS, a certified NASM trainer and nutrition coach with over a decade of experience helping clients transform their lives. After reversing his own type 2 diabetes, he built a concierge wellness business that’s helped clients collectively lose over 2,000 pounds. Yassir blends functional strength, corrective training, and low-carb nutrition with modern tools and old-school grit. He’s also a seasoned content creator, known for delivering no-nonsense fitness advice rooted in science, discipline, and lifestyle change.</p>
+
+    <div style="margin-top: 30px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+      <button onclick="toggleDropdown('beginner')" style="background: #2e2e2e; color: white; border: none; padding: 10px 25px; font-size: 1em; cursor: pointer; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Beginner</button>
+      <div id="beginner" style="display:none; text-align:left; margin-top:10px; background-color: #fffef8; padding: 15px; border-radius: 10px; max-width: 700px; margin: 10px auto;">
+        🟢 <strong>Beginner – Rebuild & Reset</strong><br>
+        For men and women 40+ who are starting fresh or returning after time off.<br>
+        This isn’t about going hard—it’s about going smart. We focus on building foundational strength, restoring mobility, improving posture, and boosting confidence. Think of it as fitness rehab meets future-proofing.<br>
+        ✅ Gentle on the joints. Focused on form. Backed by science.
+      </div>
+
+      <button onclick="toggleDropdown('intermediate')" style="background: #2e2e2e; color: white; border: none; padding: 10px 25px; font-size: 1em; cursor: pointer; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Intermediate</button>
+      <div id="intermediate" style="display:none; text-align:left; margin-top:10px; background-color: #fffef8; padding: 15px; border-radius: 10px; max-width: 700px; margin: 10px auto;">
+        🔶 <strong>Intermediate – Stronger, Leaner, Sharper</strong><br>
+        For 40+ folks who’ve got some experience and want to step it up.<br>
+        This is where the magic happens. We use time-efficient workouts to increase lean muscle, strengthen your metabolism, and improve cardiovascular health—without crash diets or injury.<br>
+        🏋️‍♂️ Real muscle. Real stamina. Real energy. Built for your life, not your ego.
+      </div>
+
+      <button onclick="toggleDropdown('pro')" style="background: #2e2e2e; color: white; border: none; padding: 10px 25px; font-size: 1em; cursor: pointer; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Pro</button>
+      <div id="pro" style="display:none; text-align:left; margin-top:10px; background-color: #fffef8; padding: 15px; border-radius: 10px; max-width: 700px; margin: 10px auto;">
+        🔴 <strong>Pro – Performance at Any Age</strong><br>
+        For high performers 40+ who want to train with intention and precision.<br>
+        This program is for the experienced lifters, weekend warriors, and everyday badasses who want more. It’s tailored with age-smart progressions, recovery strategies, and metabolic firepower.<br>
+        🔥 Peak strength, lean physique, and longevity training—without the wear and tear.
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
+  </section>
+
+  <section class="about">
+  <h2>What Clients Are Saying</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial active">“I’ve tried everything over the years, but Yassir’s program is the first one that actually stuck. I feel stronger, lighter, and more confident in my 50s than I ever did in my 30s.”<br>– Sarah M., Santa Monica</div>
+    <div class="testimonial">“As a busy dad, I needed something effective and no-BS. Yassir’s plan helped me lose 25 pounds and get back my energy without crazy diets.”<br>– Jamal R., Los Angeles</div>
+    <div class="testimonial">“The mobility work, mindset coaching, and honest nutrition advice made all the difference. I finally feel like myself again.”<br>– Nina B., Atlanta</div>
+  </div>
+  <div style="text-align:center; margin-top: 15px;">
+    <button onclick="prevTestimonial()">&#10094; Prev</button>
+    <button onclick="nextTestimonial()">Next &#10095;</button>
+  </div>
+</section>
+
+<style>
+  .testimonial-carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+    min-height: 100px;
+  }
+  .testimonial {
+    display: none;
+    padding: 20px;
+  }
+  .testimonial.active {
+    display: block;
+  }
+  .testimonial-carousel button {
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  let currentTestimonial = 0;
+  const testimonials = document.querySelectorAll(".testimonial");
+
+  function showTestimonial(index) {
+    testimonials.forEach((el, i) => {
+      el.classList.remove("active");
+      if (i === index) el.classList.add("active");
+    });
+  }
+
+  function nextTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+
+  let testimonialInterval;
+const carousel = document.querySelector('.testimonial-carousel');
+
+function startCarousel() {
+  testimonialInterval = setInterval(() => {
+    nextTestimonial();
+  }, 5000);
+}
+
+function stopCarousel() {
+  clearInterval(testimonialInterval);
+}
+
+carousel.addEventListener('mouseenter', stopCarousel);
+carousel.addEventListener('mouseleave', startCarousel);
+
+startCarousel();
